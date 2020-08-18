@@ -37,7 +37,8 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop"
+    "develop": "gatsby develop",
+    "serve": "gatsby serve"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.2",
