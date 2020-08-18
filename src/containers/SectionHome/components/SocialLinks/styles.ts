@@ -19,6 +19,13 @@ const iconStyles = css`
   width: 1.25rem;
   margin-bottom: 0.5rem;
   color: #fff;
+
+  transition: all 0.3s;
+
+  :hover,
+  :focus {
+    color: #2f5777;
+  }
 `;
 
 export const FacebookIcon = styled(Facebook)`
