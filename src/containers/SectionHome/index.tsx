@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 
 import Button from '@components/Button';
 
-import HeroBGContainer from './components/HeroBGContainer';
 import SocialLinks from './components/SocialLinks';
 import VideoModal from './components/VideoModal';
 import * as S from './styles';
@@ -72,7 +71,6 @@ const SectionHome = () => {
   ];
 
   return (
-    // <HeroBGContainer image={background}>
     <S.Wrapper>
       <Img
         fluid={background.childImageSharp.fluid}
@@ -122,7 +120,6 @@ const SectionHome = () => {
 
       <SocialLinks />
     </S.Wrapper>
-    // </HeroBGContainer>
   );
 };
 
