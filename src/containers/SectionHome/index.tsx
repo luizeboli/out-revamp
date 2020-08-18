@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 import Button from '@components/Button';
 
 import HeroBGContainer from './components/HeroBGContainer';
+import SocialLinks from './components/SocialLinks';
 import VideoModal from './components/VideoModal';
 import * as S from './styles';
 
@@ -98,6 +99,8 @@ const SectionHome = () => {
             )}
           </S.Actions>
         </S.Content>
+
+        <SocialLinks />
       </S.Wrapper>
     </HeroBGContainer>
   );
