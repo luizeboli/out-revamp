@@ -53,6 +53,12 @@ export const Actions = styled.div`
   margin-top: 1.5rem;
   margin-bottom: auto;
 
+  > hr {
+    height: 0;
+    width: 0;
+    border: 0;
+  }
+
   ${media.greaterThan('medium')`
       flex-flow: row wrap;
 
