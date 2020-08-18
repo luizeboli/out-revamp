@@ -83,9 +83,8 @@ const SectionHome = () => {
           <S.Actions>
             {actionButtons.map(
               ({ id, title, href, uppercase, color, size }) => (
-                <>
+                <React.Fragment key={id}>
                   <Button
-                    key={id}
                     href={href}
                     uppercase={uppercase}
                     color={color}
@@ -94,7 +93,7 @@ const SectionHome = () => {
                     {title}
                   </Button>
                   {id === 2 && <hr />}
-                </>
+                </React.Fragment>
               ),
             )}
           </S.Actions>
