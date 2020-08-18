@@ -9,16 +9,27 @@ export const Container = styled.div`
   left: 0;
 
   padding-left: 0.5rem;
+  margin-bottom: 1rem;
 
   display: flex;
   flex-direction: column;
+
+  a:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+`;
+
+export const TooltipContent = styled.span`
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: Monospace;
 `;
 
 const iconStyles = css`
   cursor: pointer;
-  width: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
+  width: 1.5rem;
+  color: rgba(255, 255, 255, 0.74);
 
   transition: all 0.3s;
 
@@ -38,9 +49,4 @@ export const InstagramIcon = styled(Instagram)`
 
 export const TwitterIcon = styled(Twitter)`
   ${iconStyles}
-`;
-
-export const TooltipContent = styled.span`
-  font-weight: 600;
-  font-size: 0.625rem;
 `;
