@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
 
   html, body {
-    height: 100%;
+    height: auto;
     -webkit-font-smoothing: antialiased;
   }
 `;
