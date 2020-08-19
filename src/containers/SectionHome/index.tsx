@@ -36,14 +36,20 @@ const actionButtons = [
 const SectionHome = () => {
   const { mobile, desktop, background } = useStaticQuery(graphql`
     query {
-      mobile: file(relativePath: { eq: "out-logo.png" }) {
+      mobile: file(
+        sourceInstanceName: { eq: "siteImages" }
+        name: { eq: "out-logo" }
+      ) {
         childImageSharp {
           fixed(width: 40) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      desktop: file(relativePath: { eq: "out-logo.png" }) {
+      desktop: file(
+        sourceInstanceName: { eq: "siteImages" }
+        name: { eq: "out-logo" }
+      ) {
         childImageSharp {
           fixed(width: 60) {
             ...GatsbyImageSharpFixed
@@ -51,11 +57,13 @@ const SectionHome = () => {
         }
       }
 
-      background: file(relativePath: { eq: "hero-bg.png" }) {
+      background: file(
+        sourceInstanceName: { eq: "siteImages" }
+        name: { eq: "hero-bg" }
+      ) {
         childImageSharp {
-          fluid(maxWidth: 1280, quality: 100) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -82,8 +90,6 @@ const SectionHome = () => {
           width: '100%',
           height: '100%',
           zIndex: '-1',
-          maxWidth: 'none',
-          maxHeight: 'none',
         }}
       />
       <S.Header>
