@@ -9,51 +9,45 @@ import 'tippy.js/dist/svg-arrow.css';
 import 'tippy.js/animations/scale-extreme.css';
 import 'tippy.js/themes/material.css';
 
+const socialMedias = [
+  {
+    id: 1,
+    tooltip: <S.TooltipContent>/projetoout</S.TooltipContent>,
+    icon: S.FacebookIcon,
+    href: 'https://fb.me/projetoout',
+  },
+  {
+    id: 2,
+    tooltip: <S.TooltipContent>@projetoout</S.TooltipContent>,
+    icon: S.InstagramIcon,
+    href: 'https://instagram.com/projetoout',
+  },
+  {
+    id: 3,
+    tooltip: <S.TooltipContent>@out_ong</S.TooltipContent>,
+    icon: S.TwitterIcon,
+    href: 'https://twitter.com/out_ong',
+  },
+];
+
 const SocialLinks = () => {
   return (
     <S.Container>
-      <Tippy
-        placement="right"
-        animation="scale-extreme"
-        theme="material"
-        content={<S.TooltipContent>/projetoout</S.TooltipContent>}
-        arrow={roundArrow}
-        inertia
-      >
-        <a href="https://fb.me/projetoout" rel="noreferrer" target="_blank">
-          <S.FacebookIcon />
-        </a>
-      </Tippy>
-
-      <Tippy
-        placement="right"
-        animation="scale-extreme"
-        theme="material"
-        content={<S.TooltipContent>@projetoout</S.TooltipContent>}
-        arrow={roundArrow}
-        inertia
-      >
-        <a
-          href="https://instagram.com/projetoout"
-          rel="noreferrer"
-          target="_blank"
+      {socialMedias.map(({ id, tooltip, icon: Icon, href }) => (
+        <Tippy
+          key={id}
+          placement="right"
+          animation="scale-extreme"
+          theme="material"
+          content={tooltip}
+          arrow={roundArrow}
+          inertia
         >
-          <S.InstagramIcon />
-        </a>
-      </Tippy>
-
-      <Tippy
-        placement="right"
-        animation="scale-extreme"
-        theme="material"
-        content={<S.TooltipContent>@out_ong</S.TooltipContent>}
-        arrow={roundArrow}
-        inertia
-      >
-        <a href="https://twitter.com/out_ong" rel="noreferrer" target="_blank">
-          <S.TwitterIcon />
-        </a>
-      </Tippy>
+          <a href={href} rel="noreferrer" target="_blank">
+            <Icon />
+          </a>
+        </Tippy>
+      ))}
     </S.Container>
   );
 };
