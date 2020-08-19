@@ -71,7 +71,7 @@ const SectionHome = () => {
   ];
 
   return (
-    <S.Wrapper>
+    <S.Container>
       <Img
         fluid={background.childImageSharp.fluid}
         alt="A palavra OUT escrita em letra de mão"
@@ -119,7 +119,7 @@ const SectionHome = () => {
       </S.Content>
 
       <SocialLinks />
-    </S.Wrapper>
+    </S.Container>
   );
 };
 
