@@ -1,5 +1,4 @@
 import * as React from 'react';
-import SectionHome from '@containers/SectionHome';
 
 import Layout from '@components/Layout';
 import Footer from '@containers/Footer';
