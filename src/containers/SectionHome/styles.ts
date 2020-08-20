@@ -7,8 +7,8 @@ export const Container = styled.div`
   max-width: 1440px;
   min-height: 100vh;
 
-  margin: 0 auto;
   color: #fff;
+  position: relative;
 `;
 
 export const Content = styled.div`
