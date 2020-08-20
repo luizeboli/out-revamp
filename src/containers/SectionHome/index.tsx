@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Button from '@components/Button';
 
+import DonateModal from './components/DonateModal';
 import SocialLinks from './components/SocialLinks';
 import VideoModal from './components/VideoModal';
 import * as S from './styles';
@@ -22,14 +23,6 @@ const actionButtons = [
     href: '#',
     uppercase: true,
     color: 'primary',
-  },
-  {
-    id: 3,
-    title: 'Vem doar!',
-    href: '#',
-    uppercase: true,
-    color: 'secondary',
-    size: 'medium',
   },
 ];
 
@@ -78,6 +71,8 @@ const SectionHome = () => {
     },
   ];
 
+  const [visible, setVisible] = useState(false);
+
   return (
     <S.Container>
       <Img
@@ -92,6 +87,7 @@ const SectionHome = () => {
           zIndex: '-1',
         }}
       />
+
       <S.Header>
         <Img
           fixed={logoSources}
@@ -121,6 +117,7 @@ const SectionHome = () => {
               {id === 2 && <hr />}
             </React.Fragment>
           ))}
+          <DonateModal />
         </S.Actions>
       </S.Content>
 
