@@ -51,6 +51,16 @@ export const Button = styled.a<Props>`
     }
 
     ${
+      color === 'tertiary' &&
+      css`
+        background-color: #151515;
+        :hover {
+          background-color: #2f5777;
+        }
+      `
+    }
+
+    ${
       uppercase &&
       css`
         text-transform: uppercase;

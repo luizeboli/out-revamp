@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import * as S from './styles';
 
 type ButtonProps = {
-  children: string;
+  children: string | ReactNode;
   color: string;
   href?: string;
   size?: string;

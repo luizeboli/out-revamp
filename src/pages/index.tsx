@@ -2,6 +2,7 @@ import * as React from 'react';
 import SectionHome from '@containers/SectionHome';
 
 import Layout from '@components/Layout';
+import Footer from '@containers/Footer';
 import SectionAboutUs from '@containers/SectionAboutUs';
 import SectionHome from '@containers/SectionHome';
 
@@ -9,6 +10,7 @@ const SinglePage = () => (
   <Layout>
     <SectionHome />
     <SectionAboutUs />
+    <Footer />
   </Layout>
 );
 
