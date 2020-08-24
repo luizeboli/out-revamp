@@ -54,13 +54,14 @@ export const ActivityHeader = styled.div`
 
   > h6 {
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
     margin-left: 0.75rem;
   }
 `;
 
 export const ActivityContent = styled.p`
   color: #fff;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   line-height: 1.6;
   white-space: pre-line;
 `;
@@ -82,6 +83,7 @@ export const GridItem = styled.div`
 
 const iconCss = css`
   width: 36px;
+  flex-shrink: 0;
 `;
 
 export const ClassRoomIcon = styled(Googleclassroom)`
