@@ -25,6 +25,7 @@ export const Container = styled.div`
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 2rem;
     font-size: clamp(1.625rem, 4vw, 2.5rem);
     font-weight: 500;
     color: #8ab3b9;
@@ -47,7 +48,7 @@ export const ActivityHeader = styled.div`
   align-items: center;
   justify-content: flex-start;
   color: #fff;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 0.75rem;
   line-height: 1.5;
 
