@@ -6,6 +6,7 @@ import SectionAboutUs from '@containers/SectionAboutUs';
 import SectionHome from '@containers/SectionHome';
 import SectionOurWorks from '@containers/SectionOurWorks';
 import SectionSocialActivities from '@containers/SectionSocialActivities';
+import SectionVolunteers from '@containers/SectionVolunteers';
 
 const SinglePage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const SinglePage = () => (
     <SectionAboutUs />
     <SectionSocialActivities />
     <SectionOurWorks />
+    <SectionVolunteers />
     <Footer />
   </Layout>
 );
