@@ -54,14 +54,13 @@ export const ActivityHeader = styled.div`
 
   > h6 {
     font-weight: 500;
-    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-size: 1.125rem;
     margin-left: 0.75rem;
   }
 `;
 
 export const ActivityContent = styled.p`
   color: #fff;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
   line-height: 1.6;
   white-space: pre-line;
 `;
