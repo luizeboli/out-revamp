@@ -48,7 +48,7 @@
           {
             "groups": [
               ["^react", "^\\w", "^@+\\w"],
-              ["^@+(assets|components|containers|styles)"],
+              ["^@+(assets|components|containers|styles|hooks)"],
               ["^\\.\\./", "^\\./"]
             ]
           }

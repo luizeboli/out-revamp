@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import GLightbox from 'glightbox';
 
 import SectionLayout from '@components/SectionLayout';
 import SocialLinks from '@components/SocialLinks';
+import setupLightbox from '@hooks/setupLightbox';
 import theme from '@styles/theme';
 
 import * as S from './styles';
@@ -29,31 +29,12 @@ const SectionOurWorks = () => {
   `);
 
   useEffect(() => {
-    const lb = GLightbox({
-      touchNavigation: true,
-      loop: true,
-      autoplayVideos: true,
+    setupLightbox({
       selector: '.out-calendar',
-      zoomable: true,
-      closeOnOutsideClick: true,
-      onOpen: () => addListenerToGLightbox(),
+      outerSliderEl: 'gslider',
+      innerSlideEl: 'gslide',
+      innerContainerEl: 'ginner-container',
     });
-
-    const addListenerToGLightbox = () => {
-      const slides = document
-        .getElementsByClassName('gslider')[0]
-        .getElementsByClassName('gslide');
-
-      Array.from(slides).forEach((slide) => {
-        const slideContainer = slide.getElementsByClassName(
-          'ginner-container',
-        )[0];
-
-        slideContainer.addEventListener('click', ({ target, currentTarget }) =>
-          target === currentTarget ? lb.close() : null,
-        );
-      });
-    };
   }, []);
 
   return (

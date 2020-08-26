@@ -5,6 +5,7 @@
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@containers/*": ["containers/*"],
+      "@hooks/*": ["hooks/*"],
       "@styles/*": ["styles/*"]
     },
     "target": "es5",
