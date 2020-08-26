@@ -3,9 +3,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Button from '@components/Button';
+import SocialLinks from '@components/SocialLinks';
 
 import DonateModal from './components/DonateModal';
-import SocialLinks from './components/SocialLinks';
 import VideoModal from './components/VideoModal';
 import * as S from './styles';
 
@@ -121,7 +121,18 @@ const SectionHome = () => {
         </S.Actions>
       </S.Content>
 
-      <SocialLinks />
+      <SocialLinks
+        position="absolute"
+        bottom={12}
+        left={0}
+        display="flex"
+        flexDirection="column"
+        paddingLeft="0.5rem"
+        marginBottom="0.5rem"
+        width="1.5rem"
+        color="rgba(255, 255, 255, 0.74)"
+        tooltipPlacement="right"
+      />
     </S.Container>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { roundArrow } from 'tippy.js';
+import { Placement, roundArrow } from 'tippy.js';
 import Tippy from '@tippyjs/react';
 
 import * as S from './styles';
@@ -8,6 +8,23 @@ import 'tippy.js/dist/tippy.css';
 import 'tippy.js/dist/svg-arrow.css';
 import 'tippy.js/animations/scale-extreme.css';
 import 'tippy.js/themes/material.css';
+
+type Props = {
+  position?: string;
+  bottom?: number;
+  left?: number;
+  display?: string;
+  flexDirection?: string;
+  alignItems?: string;
+  justifyContent?: string;
+  paddingLeft?: string;
+  marginRight?: string;
+  marginBottom?: string;
+  width?: string;
+  color?: string;
+  tooltipPlacement?: Placement;
+  containerMargin?: string;
+};
 
 const socialMedias = [
   {
@@ -22,21 +39,15 @@ const socialMedias = [
     icon: S.InstagramIcon,
     href: 'https://instagram.com/projetoout',
   },
-  {
-    id: 3,
-    tooltip: <S.TooltipContent>@out_ong</S.TooltipContent>,
-    icon: S.TwitterIcon,
-    href: 'https://twitter.com/out_ong',
-  },
 ];
 
-const SocialLinks = () => {
+const SocialLinks: React.FC<Props> = ({ tooltipPlacement, ...restProps }) => {
   return (
-    <S.Container>
+    <S.Container {...restProps}>
       {socialMedias.map(({ id, tooltip, icon: Icon, href }) => (
         <Tippy
           key={id}
-          placement="right"
+          placement={tooltipPlacement}
           animation="scale-extreme"
           theme="material"
           content={tooltip}
@@ -44,7 +55,7 @@ const SocialLinks = () => {
           inertia
         >
           <a href={href} rel="noreferrer" target="_blank">
-            <Icon />
+            <Icon className="social-link-icon" />
           </a>
         </Tippy>
       ))}
