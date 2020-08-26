@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { KeyboardArrowUp } from '@styled-icons/material-rounded/KeyboardArrowUp';
 
-export const Container = styled.div`
+export const Container = styled.footer`
   background-color: #151515;
   height: 6rem;
   display: flex;
