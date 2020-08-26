@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import GLightbox from 'glightbox';
 
 import setupLightbox from '@hooks/setupLightbox';
 
@@ -11,8 +12,9 @@ const VideoModal = () => {
     setupLightbox({
       selector: '#out-video',
       outerSliderEl: 'gslider',
-      innerSlideEl: 'gvideo-container',
-      innerContainerEl: 'ginner-container',
+      innerSlideEl: 'gslide-inner-content',
+      innerContainerEl: 'gvideo-container',
+      isVideo: true,
     });
   }, []);
 

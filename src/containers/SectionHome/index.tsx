@@ -71,8 +71,6 @@ const SectionHome = () => {
     },
   ];
 
-  const [visible, setVisible] = useState(false);
-
   return (
     <S.Container>
       <Img
