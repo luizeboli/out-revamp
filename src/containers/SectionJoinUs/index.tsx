@@ -2,7 +2,9 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
+import SectionLayout from '@components/SectionLayout';
 import SocialLinks from '@components/SocialLinks';
+import theme from '@styles/theme';
 
 import * as S from './styles';
 
@@ -26,23 +28,27 @@ const SectionOurWorks = () => {
   `);
 
   return (
-    <S.Wrapper>
-      <S.Container>
-        <h1>Seja um voluntário</h1>
-        <h2>Fique atento às programações!</h2>
+    <SectionLayout
+      backgroundColor={theme.secondary}
+      headingColor={theme.primary}
+      headingAlignment="center"
+    >
+      <h1>Seja um voluntário</h1>
+      <h2>Fique atento às programações!</h2>
 
-        <S.ImageWrapper>
-          {calendar.nodes.map((node) => (
-            <a
-              key={node.childImageSharp.id}
-              href={node.childImageSharp.original.src}
-              className="out-gallery"
-            >
-              <Img fluid={node.childImageSharp.thumb} />
-            </a>
-          ))}
-        </S.ImageWrapper>
+      <S.ImageWrapper>
+        {calendar.nodes.map((node) => (
+          <a
+            key={node.childImageSharp.id}
+            href={node.childImageSharp.original.src}
+            className="out-gallery"
+          >
+            <Img fluid={node.childImageSharp.thumb} />
+          </a>
+        ))}
+      </S.ImageWrapper>
 
+      <S.InnerContainer>
         <p>
           Entre em contato com a gente através das redes sociais.
           <br />
@@ -65,8 +71,8 @@ const SectionOurWorks = () => {
           <br />
           <a href="mailto:parceiros@out.ong.br">parceiros@out.ong.br</a>
         </p>
-      </S.Container>
-    </S.Wrapper>
+      </S.InnerContainer>
+    </SectionLayout>
   );
 };
 

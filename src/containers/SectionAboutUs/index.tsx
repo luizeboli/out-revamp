@@ -1,6 +1,9 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import SectionLayout from '@components/SectionLayout';
+import theme from '@styles/theme';
+
 import Card from './components/Card';
 import * as S from './styles';
 
@@ -58,11 +61,14 @@ const SectionAboutUs = () => {
   `);
 
   return (
-    <S.Container>
+    <SectionLayout
+      backgroundColor={theme.secondary}
+      headingColor={theme.primary}
+    >
       <h1>Quem somos</h1>
-      <h6>
+      <h2>
         A OUT investe em causas sociais para o desenvolvimento de periferias.
-      </h6>
+      </h2>
 
       <S.CardsWrapper>
         {aboutUs.nodes.map((node, idx) => (
@@ -74,7 +80,7 @@ const SectionAboutUs = () => {
           />
         ))}
       </S.CardsWrapper>
-    </S.Container>
+    </SectionLayout>
   );
 };
 

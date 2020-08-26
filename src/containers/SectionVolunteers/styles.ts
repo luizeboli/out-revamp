@@ -1,47 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.section`
-  min-height: 100vh;
-  background-color: #151515;
-  padding: 2rem 1rem;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1440px;
-  margin: 0 auto;
-
-  > h1 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: clamp(1.625rem, 4vw, 2.5rem);
-    font-weight: 500;
-    color: #8ab3b9;
-    position: relative;
-
-    &:after {
-      content: ' ';
-      border-bottom: 2px solid #8ab3b9;
-      width: 100px;
-      position: absolute;
-      bottom: -0.625rem;
-      left: 50%;
-      margin-left: -50px;
-    }
-  }
-
-  > h2 {
-    color: #8ab3b9;
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-    font-weight: 500;
-    margin-top: 1rem;
-  }
-`;
-
 export const SliderContent = styled.div`
   width: 100%;
   margin-top: 3rem;

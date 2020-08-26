@@ -10,6 +10,7 @@ export const Grid = styled.div`
 
 export const GridItem = styled.div`
   overflow: hidden;
+  text-align: center;
   > a {
     width: 115%;
     height: 100%;
@@ -28,9 +29,9 @@ export const GridItem = styled.div`
 
     font-size: clamp(0.875rem, 2vw, 1rem);
     border-radius: 4px;
-    margin: 3rem -0.75rem -1.5rem;
+    margin: 4rem -0.75rem -1.5rem;
     color: #fff;
-    background: #192d3eea;
+    background: #192d3e;
     padding: 1.25rem 1rem;
     z-index: 1;
   }

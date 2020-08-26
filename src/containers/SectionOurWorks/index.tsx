@@ -1,17 +1,20 @@
 import React from 'react';
 
+import SectionLayout from '@components/SectionLayout';
+import theme from '@styles/theme';
+
 import MasonryGallery from './MasonryGallery';
-import * as S from './styles';
 
 const SectionOurWorks = () => {
   return (
-    <S.Wrapper>
-      <S.Container>
-        <h1>Nossos eventos</h1>
+    <SectionLayout
+      backgroundColor={theme.secondary}
+      headingColor={theme.primary}
+    >
+      <h1>Nossos eventos</h1>
 
-        <MasonryGallery />
-      </S.Container>
-    </S.Wrapper>
+      <MasonryGallery />
+    </SectionLayout>
   );
 };
 

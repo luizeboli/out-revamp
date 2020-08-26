@@ -1,5 +1,8 @@
 import React from 'react';
 
+import SectionLayout from '@components/SectionLayout';
+import theme from '@styles/theme';
+
 import * as S from './styles';
 
 const activities = [
@@ -64,23 +67,25 @@ const activities = [
 
 const SectionOurWorks = () => {
   return (
-    <S.Wrapper>
-      <S.Container>
-        <h1>Conheça nossas atividades</h1>
+    <SectionLayout
+      backgroundColor={theme.black}
+      headingColor={theme.secondary}
+      headingAlignment="center"
+    >
+      <h1>Conheça nossas atividades</h1>
 
-        <S.Grid>
-          {activities.map((at) => (
-            <S.GridItem key={at.id}>
-              <S.ActivityHeader>
-                <at.icon />
-                <h6>{at.title}</h6>
-              </S.ActivityHeader>
-              <S.ActivityContent>{at.content}</S.ActivityContent>
-            </S.GridItem>
-          ))}
-        </S.Grid>
-      </S.Container>
-    </S.Wrapper>
+      <S.Grid>
+        {activities.map((at) => (
+          <S.GridItem key={at.id}>
+            <S.ActivityHeader>
+              <at.icon />
+              <h4>{at.title}</h4>
+            </S.ActivityHeader>
+            <S.ActivityContent>{at.content}</S.ActivityContent>
+          </S.GridItem>
+        ))}
+      </S.Grid>
+    </SectionLayout>
   );
 };
 
