@@ -40,7 +40,20 @@ export const ImageWrapper = styled.div`
   width: 100%;
   max-width: 650px;
 
-  .gatsby-image-wrapper {
-    border-radius: 4px;
+  > a {
+    overflow: hidden;
+
+    .gatsby-image-wrapper {
+      border-radius: 4px;
+      transition: transform 0.4s ease-out, filter 0.4s ease-out;
+    }
+
+    :hover,
+    :focus {
+      .gatsby-image-wrapper {
+        transform: scale(1.02);
+        filter: brightness(0.7);
+      }
+    }
   }
 `;
