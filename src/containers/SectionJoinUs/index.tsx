@@ -34,7 +34,7 @@ const SectionOurWorks = () => {
         <S.ImageWrapper>
           {calendar.nodes.map((node) => (
             <a
-              key={node.id}
+              key={node.childImageSharp.id}
               href={node.childImageSharp.original.src}
               className="out-gallery"
             >
