@@ -32,6 +32,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `calendar`,
+        path: `${__dirname}/src/assets/calendar/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-root-import`,
       options: {
         '@components': path.join(__dirname, 'src', 'components'),
