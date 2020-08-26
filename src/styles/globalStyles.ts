@@ -15,8 +15,4 @@ export default createGlobalStyle`
     height: auto;
     -webkit-font-smoothing: antialiased;
   }
-
-  body {
-    scroll-behavior: smooth;
-  }
 `;
