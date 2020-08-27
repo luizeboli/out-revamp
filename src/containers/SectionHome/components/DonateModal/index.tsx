@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Rodal from 'rodal';
 
 import PaypalButtonGif from '@assets/siteImages/btn-donate.gif';
@@ -10,10 +10,21 @@ import 'rodal/lib/rodal.css';
 
 const DonateModal = () => {
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (visible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [visible]);
+
+  const toggleModalVisible = () => setVisible((prevValue) => !prevValue);
+
   return (
     <>
       <Button
-        onClick={() => setVisible(true)}
+        onClick={() => toggleModalVisible()}
         size="medium"
         uppercase
         color="secondary"
@@ -23,10 +34,10 @@ const DonateModal = () => {
       <S.Container>
         <Rodal
           visible={visible}
-          onClose={() => setVisible(false)}
+          onClose={() => toggleModalVisible()}
           customStyles={{
             maxWidth: '600px',
-            width: 'unset',
+            width: '95%',
             height: 'fit-content',
           }}
         >
