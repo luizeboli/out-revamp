@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 type WrapperProps = {
@@ -9,7 +10,7 @@ type ContainerProps = {
   headingAlignment?: string;
 };
 
-export const Wrapper = styled.section<WrapperProps>`
+export const Wrapper = styled.div<WrapperProps>`
   ${({ backgroundColor }) => css`
     background-color: ${backgroundColor};
     min-height: 100vh;
@@ -17,8 +18,8 @@ export const Wrapper = styled.section<WrapperProps>`
   `}
 `;
 
-export const Container = styled.div<ContainerProps>`
-  ${({ headingColor, headingAlignment }) => css`
+export const Container = styled(motion.div)`
+  ${({ headingColor, headingAlignment }: ContainerProps) => css`
     display: flex;
     flex-direction: column;
     align-items: center;
