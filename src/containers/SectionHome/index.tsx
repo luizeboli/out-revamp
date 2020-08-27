@@ -115,7 +115,12 @@ const SectionHome = () => {
         <Img
           fluid={background.childImageSharp.fluid}
           alt="A palavra OUT escrita em letra de mão"
-          style={{}}
+          style={{
+            position: 'absolute',
+            top: 0,
+            width: '100%',
+            height: '100%',
+          }}
         />
       </motion.div>
 
