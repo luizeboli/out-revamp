@@ -55,7 +55,7 @@ const SectionHome = () => {
         name: { eq: "hero-bg" }
       ) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(maxWidth: 1280, quality: 70) {
             ...GatsbyImageSharpFluid
           }
         }
