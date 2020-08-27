@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import GLightbox from 'glightbox';
 
 import setupLightbox from '@hooks/setupLightbox';
 
