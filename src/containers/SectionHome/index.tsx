@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react';
-import { useAnimation } from 'framer-motion';
+import {
+  motion,
+  useAnimation,
+  useTransform,
+  useViewportScroll,
+} from 'framer-motion';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -27,7 +32,7 @@ const actionButtons = [
   },
 ];
 
-const getItemVariant = (yValue) => ({
+const getItemVariant = (yValue: number) => ({
   hidden: { y: yValue, opacity: 0 },
   visible: {
     y: 0,
@@ -86,6 +91,9 @@ const SectionHome = () => {
   ];
 
   const controls = useAnimation();
+  const { scrollY } = useViewportScroll();
+  const contentY = useTransform(scrollY, [0, 600], [0, -150]);
+  const imgY = useTransform(scrollY, [0, 800], [0, 400]);
 
   useEffect(() => {
     controls.start('visible');
@@ -93,18 +101,23 @@ const SectionHome = () => {
 
   return (
     <S.Container>
-      <Img
-        fluid={background.childImageSharp.fluid}
-        alt="A palavra OUT escrita em letra de mão"
+      <motion.div
         style={{
+          y: imgY,
           position: 'absolute',
           left: 0,
           top: 0,
           width: '100%',
           height: '100%',
-          zIndex: '-1',
+          zIndex: -1,
         }}
-      />
+      >
+        <Img
+          fluid={background.childImageSharp.fluid}
+          alt="A palavra OUT escrita em letra de mão"
+          style={{}}
+        />
+      </motion.div>
 
       <S.Header>
         <Img
@@ -128,6 +141,7 @@ const SectionHome = () => {
             },
           },
         }}
+        style={{ y: contentY }}
       >
         <S.Title variants={getItemVariant(-30)}>
           <h1>Instituição OUT</h1>
