@@ -52,7 +52,7 @@ const SectionAboutUs = () => {
           childImageSharp {
             id
             fluid(maxWidth: 600, quality: 70) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }

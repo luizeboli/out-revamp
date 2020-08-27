@@ -22,10 +22,10 @@ const MasonryGallery = () => {
           childImageSharp {
             id
             thumb: fluid(maxWidth: 540, quality: 70) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
-            original: fluid(quality: 100) {
-              ...GatsbyImageSharpFluid
+            original: fluid(quality: 70) {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -49,7 +49,7 @@ const MasonryGallery = () => {
       {works.nodes.map((node: NodeProps) => (
         <S.GridItem key={node.childImageSharp.id}>
           <a href={node.childImageSharp.original.src} className="out-gallery">
-            <Img fluid={node.childImageSharp.thumb}></Img>
+            <Img fluid={node.childImageSharp.thumb} backgroundColor></Img>
           </a>
         </S.GridItem>
       ))}

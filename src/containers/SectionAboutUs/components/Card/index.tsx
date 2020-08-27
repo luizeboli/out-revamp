@@ -13,7 +13,7 @@ const Card = ({ title, content, image }: Props) => {
   return (
     <S.Container>
       <S.PhotoContainer>
-        <Img fluid={image} style={{ height: '100%' }} />
+        <Img fluid={image} style={{ height: '100%' }} backgroundColor />
       </S.PhotoContainer>
 
       <S.CardTitle>

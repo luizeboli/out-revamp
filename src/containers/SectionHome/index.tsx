@@ -54,7 +54,7 @@ const SectionHome = () => {
       ) {
         childImageSharp {
           fixed(width: 40) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }
@@ -64,7 +64,7 @@ const SectionHome = () => {
       ) {
         childImageSharp {
           fixed(width: 60) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }
@@ -121,6 +121,10 @@ const SectionHome = () => {
             width: '100%',
             height: '100%',
           }}
+          placeholderStyle={{
+            filter: 'blur(5px)',
+          }}
+          backgroundColor
         />
       </motion.div>
 

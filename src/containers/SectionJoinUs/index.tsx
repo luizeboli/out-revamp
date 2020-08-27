@@ -17,10 +17,10 @@ const SectionOurWorks = () => {
           childImageSharp {
             id
             thumb: fluid(maxWidth: 540, quality: 70) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
             original: fluid(quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -53,7 +53,7 @@ const SectionOurWorks = () => {
             href={node.childImageSharp.original.src}
             className="out-calendar"
           >
-            <Img fluid={node.childImageSharp.thumb} />
+            <Img fluid={node.childImageSharp.thumb} backgroundColor />
           </a>
         ))}
       </S.ImageWrapper>
