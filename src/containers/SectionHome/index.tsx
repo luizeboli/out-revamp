@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useAnimation } from 'framer-motion';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -25,6 +26,19 @@ const actionButtons = [
     color: 'primary',
   },
 ];
+
+const getItemVariant = (yValue) => ({
+  hidden: { y: yValue, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 80,
+      mass: 2,
+    },
+  },
+});
 
 const SectionHome = () => {
   const { mobile, desktop, background } = useStaticQuery(graphql`
@@ -71,6 +85,12 @@ const SectionHome = () => {
     },
   ];
 
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start('visible');
+  }, []);
+
   return (
     <S.Container>
       <Img
@@ -94,14 +114,29 @@ const SectionHome = () => {
         />
       </S.Header>
 
-      <S.Content>
-        <S.Title>
+      <S.Content
+        animate={controls}
+        initial="hidden"
+        variants={{
+          hidden: { opacity: 1 },
+          visible: {
+            opacity: 1,
+            transition: {
+              when: 'beforeChildren',
+              staggerChildren: 0,
+              delay: 0.1,
+            },
+          },
+        }}
+      >
+        <S.Title variants={getItemVariant(-30)}>
           <h1>Instituição OUT</h1>
           <h6>A nossa gente é a nossa causa.</h6>
-          <VideoModal />
         </S.Title>
 
-        <S.Actions>
+        <S.Actions variants={getItemVariant(30)}>
+          <VideoModal />
+          <hr />
           {actionButtons.map(({ id, title, href, uppercase, color, size }) => (
             <React.Fragment key={id}>
               <Button

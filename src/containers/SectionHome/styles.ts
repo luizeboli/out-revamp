@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
@@ -10,7 +11,7 @@ export const Container = styled.div`
   position: relative;
 `;
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   margin: auto;
 `;
 
@@ -25,7 +26,7 @@ export const Header = styled.div`
   }
 `;
 
-export const Title = styled.div`
+export const Title = styled(motion.div)`
   text-align: center;
 
   display: flex;
@@ -44,12 +45,11 @@ export const Title = styled.div`
   }
 `;
 
-export const Actions = styled.div`
+export const Actions = styled(motion.div)`
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
   margin-bottom: auto;
 
   > hr {
