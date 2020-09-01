@@ -31,7 +31,12 @@ const MenuItem = ({ link, onClick }) => {
       whileHover={{ scale: 1.1, color: '#5D9DD0' }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link to={link.href} smooth="easeInOutQuad" onClick={() => onClick()}>
+      <Link
+        to={link.href}
+        smooth="easeInOutQuad"
+        onClick={() => onClick()}
+        delay={1000}
+      >
         {link.title}
       </Link>
     </S.ListItem>
