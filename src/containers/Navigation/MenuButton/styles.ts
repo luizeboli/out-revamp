@@ -9,5 +9,5 @@ export const Button = styled.button`
   height: 50px;
   border-radius: 50%;
   background: transparent;
-  margin: 1.0625rem 0 0 auto;
+  margin: 1.1rem 0 0 auto;
 `;
