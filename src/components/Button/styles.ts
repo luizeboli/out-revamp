@@ -88,6 +88,8 @@ export const Button = styled.button<Props>`
 
         > a {
           padding: 1rem;
+          width: 100%;
+          height: 100%;
         }
       `
     }
