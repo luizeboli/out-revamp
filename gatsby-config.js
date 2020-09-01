@@ -6,7 +6,7 @@ module.exports = {
     title: 'Instituição OUT',
     description: 'A nossa gente é a nossa causa!',
     lang: 'pt-br',
-    siteUrl: 'https://out.ong.br',
+    siteUrl: 'https://out-revamp.netlify.app',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
