@@ -58,12 +58,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Nunito Sans`,
-            variants: [`400`],
-          },
-          {
             family: `Montserrat`,
-            variants: [`200`, `300`, `400`, `500`, `600`, `700`],
+            variants: [`300`, `400`, `500`, `600`],
           },
         ],
       },
