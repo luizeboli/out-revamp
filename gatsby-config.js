@@ -3,13 +3,17 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `ONG Out`,
+    title: 'Instituição OUT',
+    description: 'A nossa gente é a nossa causa!',
+    lang: 'pt-br',
+    siteUrl: 'https://out.ong.br',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,6 +72,18 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Instituição OUT`,
+        short_name: `OUT`,
+        start_url: `/`,
+        background_color: `#151515`,
+        theme_color: `#192d3e`,
+        display: `minimal-ui`,
+        icon: `src/assets/siteImages/favicon.ico`,
       },
     },
   ],
