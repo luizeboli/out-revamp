@@ -154,7 +154,7 @@ const SectionHome = () => {
       >
         <S.Title variants={getItemVariant(-30)}>
           <h1>Instituição OUT</h1>
-          <h6>A nossa gente é a nossa causa.</h6>
+          <h2>A nossa gente é a nossa causa.</h2>
         </S.Title>
 
         <S.Actions variants={getItemVariant(30)}>

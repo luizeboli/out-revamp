@@ -39,7 +39,7 @@ export const Title = styled(motion.div)`
     font-size: clamp(2.75rem, 9vw, 8rem);
   }
 
-  > h6 {
+  > h2 {
     font-size: clamp(1rem, 2.5vw, 2rem);
     font-weight: 300;
     color: rgba(255, 255, 255, 0.74);

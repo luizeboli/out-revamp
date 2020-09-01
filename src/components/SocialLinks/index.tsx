@@ -32,19 +32,21 @@ const socialMedias = [
     tooltip: <S.TooltipContent>/projetoout</S.TooltipContent>,
     icon: S.FacebookIcon,
     href: 'https://fb.me/projetoout',
+    label: 'Facebook',
   },
   {
     id: 2,
     tooltip: <S.TooltipContent>@projetoout</S.TooltipContent>,
     icon: S.InstagramIcon,
     href: 'https://instagram.com/projetoout',
+    label: 'Instagram',
   },
 ];
 
 const SocialLinks: React.FC<Props> = ({ tooltipPlacement, ...restProps }) => {
   return (
     <S.Container {...restProps}>
-      {socialMedias.map(({ id, tooltip, icon: Icon, href }) => (
+      {socialMedias.map(({ id, tooltip, icon: Icon, href, label }) => (
         <Tippy
           key={id}
           placement={tooltipPlacement}
@@ -54,7 +56,7 @@ const SocialLinks: React.FC<Props> = ({ tooltipPlacement, ...restProps }) => {
           arrow={roundArrow}
           inertia
         >
-          <a href={href} rel="noreferrer" target="_blank">
+          <a href={href} rel="noreferrer" target="_blank" aria-label={label}>
             <Icon className="social-link-icon" />
           </a>
         </Tippy>

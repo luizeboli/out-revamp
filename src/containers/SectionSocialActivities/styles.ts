@@ -16,7 +16,7 @@ export const ActivityHeader = styled.div`
   margin-bottom: 0.75rem;
   line-height: 1.5;
 
-  > h4 {
+  > h2 {
     font-weight: 500;
     font-size: 1.125rem;
     margin-left: 0.75rem;

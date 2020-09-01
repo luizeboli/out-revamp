@@ -14,7 +14,7 @@ const Path = (props) => (
 );
 
 const MenuButton = ({ toggle }) => (
-  <S.Button onClick={toggle} tabIndex="0">
+  <S.Button onClick={toggle} tab-index="0" aria-label="Menu de navegação">
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{

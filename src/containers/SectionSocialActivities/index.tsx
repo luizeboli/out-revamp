@@ -80,7 +80,7 @@ const SectionOurWorks = () => {
           <S.GridItem key={at.id}>
             <S.ActivityHeader>
               <at.icon />
-              <h4>{at.title}</h4>
+              <h2>{at.title}</h2>
             </S.ActivityHeader>
             <S.ActivityContent>{at.content}</S.ActivityContent>
           </S.GridItem>

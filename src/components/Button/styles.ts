@@ -47,7 +47,13 @@ export const Button = styled.button<Props>`
     ${
       color === 'secondary' &&
       css`
+        color: #151515;
         background-color: #cc7639;
+        font-weight: 600;
+
+        :hover {
+          color: #fff;
+        }
       `
     }
 

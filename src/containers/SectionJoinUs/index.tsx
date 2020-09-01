@@ -53,6 +53,7 @@ const SectionOurWorks = () => {
             key={node.childImageSharp.id}
             href={node.childImageSharp.original.src}
             className="out-calendar"
+            aria-label="Calendário de ações e eventos"
           >
             <Img fluid={node.childImageSharp.thumb} backgroundColor />
           </a>

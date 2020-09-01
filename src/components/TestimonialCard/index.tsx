@@ -15,7 +15,7 @@ const TestimonialCard: React.FC<Props> = ({ id, name, content }) => {
     <S.Container>
       <S.Volunteer>
         <S.ImageWrapper>
-          <img src={AU1} />
+          <img src={AU1} alt="" />
         </S.ImageWrapper>
         <span>Luiz Felicio</span>
       </S.Volunteer>

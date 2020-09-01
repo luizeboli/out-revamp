@@ -48,7 +48,11 @@ const MasonryGallery = () => {
       </S.GridItem>
       {works.nodes.map((node: NodeProps) => (
         <S.GridItem key={node.childImageSharp.id}>
-          <a href={node.childImageSharp.original.src} className="out-gallery">
+          <a
+            href={node.childImageSharp.original.src}
+            className="out-gallery"
+            aria-label="Fotos dos eventos comunitários"
+          >
             <Img fluid={node.childImageSharp.thumb} backgroundColor></Img>
           </a>
         </S.GridItem>
