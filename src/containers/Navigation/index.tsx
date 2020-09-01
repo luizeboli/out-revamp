@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useCycle } from 'framer-motion';
 
+import SocialLinks from '@components/SocialLinks';
 import useClickAway from '@hooks/useClickAway';
 
 import MenuButton from './MenuButton';
@@ -90,6 +91,16 @@ const Navbar = () => {
         Conheça nossos projetos, nossos valores e como você pode colaborar com o
         nosso trabalho.
         <br />
+        <SocialLinks
+          display="flex"
+          alignItems="center"
+          justifyContent="flex-start"
+          marginRight="0.5rem"
+          width="clamp(1.5rem, 2vw, 2rem)"
+          color="rgba(255,255,255,0.74)"
+          tooltipPlacement="top"
+          containerMargin="1rem 0 1.5rem 0"
+        />
       </S.Footer>
     </S.Container>
   );

@@ -36,8 +36,8 @@ export const Container = styled.div<ContainerProps>`
     containerMargin,
   }) => css`
     position: ${position};
-    bottom: ${bottom}px;
-    left: ${left};
+    bottom: ${bottom && bottom + 'px'};
+    left: ${left && left + 'px'};
 
     padding-left: ${paddingLeft};
     margin: ${containerMargin};
