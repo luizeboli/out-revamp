@@ -4,10 +4,11 @@ type Props = {
   color: string;
   uppercase: boolean;
   size?: string;
+  href?: string;
 };
 
-export const Button = styled.a<Props>`
-  ${({ color, uppercase, size }) => css`
+export const Button = styled.button<Props>`
+  ${({ color, uppercase, size, href }) => css`
     background: none;
     border: none;
     cursor: pointer;
@@ -24,8 +25,8 @@ export const Button = styled.a<Props>`
     letter-spacing: 3px;
     text-align: center;
     
-    margin-bottom: 0.5rem;
     padding: 1rem;
+    margin-bottom: 0.5rem;
     
     max-width: clamp(14rem, 22.5vw, 17rem);
     width: 100%;
@@ -71,6 +72,17 @@ export const Button = styled.a<Props>`
       size === 'medium' &&
       css`
         width: clamp(11rem, 22.5vw, 14rem);
+      `
+    }
+
+    ${
+      href &&
+      css`
+        padding: 0;
+
+        > a {
+          padding: 1rem;
+        }
       `
     }
   `}

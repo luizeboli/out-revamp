@@ -36,6 +36,7 @@ const SectionOurWorks = () => {
       backgroundColor={theme.black}
       headingColor={theme.secondary}
       headingAlignment="center"
+      name="volunteers"
     >
       <h1>Conheça nossos parceiros</h1>
       <h2>Junte-se aos nosso voluntários!</h2>

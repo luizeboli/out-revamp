@@ -19,14 +19,14 @@ const actionButtons = [
   {
     id: 1,
     title: 'Vem ver!',
-    href: '#',
+    href: 'about-us',
     uppercase: true,
     color: 'primary',
   },
   {
     id: 2,
     title: 'Vem participar!',
-    href: '#',
+    href: 'join-us',
     uppercase: true,
     color: 'primary',
   },
@@ -100,7 +100,7 @@ const SectionHome = () => {
   }, []);
 
   return (
-    <S.Container>
+    <S.Container name="home">
       <motion.div
         style={{
           y: imgY,
@@ -160,14 +160,9 @@ const SectionHome = () => {
         <S.Actions variants={getItemVariant(30)}>
           <VideoModal />
           <hr />
-          {actionButtons.map(({ id, title, href, uppercase, color, size }) => (
+          {actionButtons.map(({ id, title, href, uppercase, color }) => (
             <React.Fragment key={id}>
-              <Button
-                href={href}
-                uppercase={uppercase}
-                color={color}
-                size={size}
-              >
+              <Button href={href} uppercase={uppercase} color={color}>
                 {title}
               </Button>
               {id === 2 && <hr />}

@@ -71,6 +71,7 @@ const SectionOurWorks = () => {
       backgroundColor={theme.black}
       headingColor={theme.secondary}
       headingAlignment="center"
+      name="social-activities"
     >
       <h1>Conheça nossas atividades</h1>
 

@@ -85,7 +85,7 @@ const Navbar = () => {
     >
       <S.Title variants={titleVariants}>Navegue com a gente</S.Title>
       <MenuButton toggle={() => toggleOpen()} />
-      <MenuItems />
+      <MenuItems onClick={() => toggleOpen()} />
       <S.Footer variants={footerVariants}>
         Conheça nossos projetos, nossos valores e como você pode colaborar com o
         nosso trabalho.

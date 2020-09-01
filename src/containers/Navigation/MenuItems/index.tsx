@@ -20,33 +20,39 @@ const navigationLinks = [
   {
     id: 1,
     title: 'Início',
+    href: 'home',
   },
   {
     id: 2,
     title: 'Quem somos',
+    href: 'about-us',
   },
   {
     id: 3,
     title: 'Trabalhos',
+    href: 'social-activities',
   },
   {
     id: 4,
     title: 'Parceiros',
+    href: 'volunteers',
   },
   {
     id: 5,
     title: 'Transparência financeira',
+    href: 'social-activities',
   },
   {
     id: 6,
     title: 'Quero ser voluntário',
+    href: 'join-us',
   },
 ];
 
-const MenuWrapper = () => (
+const MenuWrapper = ({ onClick }) => (
   <S.List variants={variants}>
     {navigationLinks.map((link) => (
-      <MenuItem key={link.id} link={link} />
+      <MenuItem key={link.id} link={link} onClick={onClick} />
     ))}
   </S.List>
 );

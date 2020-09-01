@@ -1,8 +1,9 @@
+import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-export const Container = styled.div`
+export const Container = styled(Element)`
   display: flex;
   flex-direction: column;
   min-height: 100vh;

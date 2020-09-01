@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import * as S from './styles';
 
@@ -21,7 +22,7 @@ const variants = {
   },
 };
 
-const MenuItem = ({ link }) => {
+const MenuItem = ({ link, onClick }) => {
   return (
     <S.ListItem
       count={link.id}
@@ -30,7 +31,9 @@ const MenuItem = ({ link }) => {
       whileHover={{ scale: 1.1, color: '#5D9DD0' }}
       whileTap={{ scale: 0.95 }}
     >
-      {link.title}
+      <Link to={link.href} smooth="easeInOutQuad" onClick={() => onClick()}>
+        {link.title}
+      </Link>
     </S.ListItem>
   );
 };

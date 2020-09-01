@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear();
 const Footer = () => {
   return (
     <S.Container>
-      <Button color="tertiary" uppercase>
+      <Button color="tertiary" uppercase href="home">
         <>
           <S.ArrowUp />
           Voltar ao Topo

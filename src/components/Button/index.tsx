@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { Link } from 'react-scroll';
 
 import * as S from './styles';
 
@@ -12,8 +13,14 @@ type ButtonProps = {
 
 const Button = ({ children, color, uppercase, href, size }: ButtonProps) => {
   return (
-    <S.Button color={color} uppercase={uppercase} href={href} size={size}>
-      {children}
+    <S.Button color={color} uppercase={uppercase} href={href}>
+      {href ? (
+        <Link to={href} size={size} smooth="easeInOutQuart" duration={1500}>
+          {children}
+        </Link>
+      ) : (
+        { children }
+      )}
     </S.Button>
   );
 };

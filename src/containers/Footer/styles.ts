@@ -16,7 +16,7 @@ export const Container = styled.footer`
     line-height: 1.5;
   }
 
-  > a {
+  > button {
     font-weight: 500;
     margin-top: -2.5rem;
     margin-bottom: 1rem;

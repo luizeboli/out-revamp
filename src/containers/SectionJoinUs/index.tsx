@@ -42,6 +42,7 @@ const SectionOurWorks = () => {
       backgroundColor={theme.secondary}
       headingColor={theme.primary}
       headingAlignment="center"
+      name="join-us"
     >
       <h1>Seja um voluntário</h1>
       <h2>Fique atento às programações!</h2>

@@ -6,3 +6,5 @@ declare module '*.svg' {
 declare module '*.gif';
 
 declare module 'glightbox';
+
+declare module 'react-scroll';

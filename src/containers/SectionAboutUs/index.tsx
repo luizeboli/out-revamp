@@ -64,6 +64,7 @@ const SectionAboutUs = () => {
     <SectionLayout
       backgroundColor={theme.secondary}
       headingColor={theme.primary}
+      name="about-us"
     >
       <h1>Quem somos</h1>
       <h2>
